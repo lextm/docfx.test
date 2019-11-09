@@ -5,7 +5,7 @@
 
 jobs:
 
-- job: Windows
+- job: VS2017
 
   pool:
     vmImage: 'VS2017-Win2016'
@@ -19,3 +19,20 @@ jobs:
   - script: |
       choco install docfx
       test.bat
+
+
+- job: VS2019
+
+  pool:
+    vmImage: 'VS2019-Server2019'
+
+  variables:
+    solution: '**/*.sln'
+    buildPlatform: 'Any CPU'
+    buildConfiguration: 'Release'
+
+  steps:
+  - script: |
+      choco install docfx
+      test.bat
+
