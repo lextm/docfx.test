@@ -24,7 +24,7 @@ jobs:
 - job: VS2019
 
   pool:
-    vmImage: 'VS2019-Server2019'
+    vmImage: 'windows-2019'
 
   variables:
     solution: '**/*.sln'
