@@ -1,0 +1,5 @@
+apiRules:
+- exclude:
+    uidRegex: ^Lextm\.SharpSnmpPro\.Mib\.Registry\.ISmi.*$
+- exclude:
+    uidRegex: ^Lextm\.SharpSnmpPro\.Mib\.Registry\.Smi.*$

@@ -1,0 +1,90 @@
+{
+    "metadata": [
+      {
+        "src": [
+          {
+            "files": [
+              "*.csproj"
+            ],
+            "exclude": [
+              "**/bin/**",
+              "**/obj/**"
+            ],
+            "cwd": "."
+          }
+        ],
+        "properties": {
+          "TargetFramework": "net452"
+        },
+        "dest": "obj/lib/net452/api",
+        "shouldSkipMarkup": true
+      },
+      {
+        "src": [
+          {
+            "files": [
+              "*.csproj"
+            ],
+            "exclude": [
+              "**/bin/**",
+              "**/obj/**"
+            ],
+            "cwd": "."
+          }
+        ],
+        "properties": {
+          "TargetFramework": "netstandard2.0"
+        },
+        "dest": "obj/lib/netstandard2.0/api",
+        "shouldSkipMarkup": true,
+        "filter": "filterConfig.yml"
+      }
+    ],
+    "build": {
+      "content": [
+        {
+          "files": [
+            "**/*.yml",
+            "api/*.md"
+          ],
+          "src": "obj/lib/net452",
+          "dest": "lib/net452"
+        },
+        {
+          "files": [
+            "*.md",
+            "toc.yml"
+          ]
+        }
+      ],
+      "globalMetadata": {
+        "_appTitle": "#SNMP API Documentation",
+        "_disableContribution": true,
+        "_appFooter": "Copyright (c) 2018-2019 LeXtudio Inc.",
+        "_enableSearch": true
+      },
+      "template": "_exported_templates/sharpsnmp",
+      "overwrite": [
+        {
+          "files": [
+            "obj/lib/11.3.0/overwrite/*.md"
+          ]
+        },
+        {
+          "files": [
+            "obj/pro/2.1.0/overwrite/*.md"
+          ]
+        },
+        {
+          "files": [
+            "overwrite/*.md"
+          ]
+        }
+      ],
+      "dest": "help",
+      "xrefService": [
+        "https://xref.docs.microsoft.com/query?uid={uid}"
+      ]
+    }
+  }
+  
